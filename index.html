@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="Maicon Rodrigues dos Santos" />
+		<link rel="icon" href="#" />
+		<link rel="icon" href="#" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="#" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="/js/bootstrap.bundle.js"></script>
+		<title>Mindful Coding</title>
+	</head>
+	<body>
+		<!-- Wrapper Necessário para Sidebar Responsiva -->
+		<div id="wrapper" class="container-fluid">
+			<!-- Row 1 que vai abrigar col 1, col 2 e seus aninhamentos quando em tela grande -->
+			<div class="row nowrap">
+				<header class="col-md-3">
+					<nav
+						class="navbar flex-column "
+						role="navigation"
+					>
+						<nav class="navbar-brand">
+							<img
+								src="http://placehold.it/200x100?text=hello+world"
+								alt=""
+							/>
+						</nav>
+						<ul class="nav gap-3">
+							<li class="nav-item 1"><a href="#">Inicio</a></li>
+							<li class="nav-item 1"><a href="#">Videos</a></li>
+							<li class="nav-item 1"><a href="#">Artigos</a></li>
+							<li class="nav-item 1"><a href="#">Contato</a></li>
+						</ul>
+					</nav>
+				</header>
+				<div class="container mb-3 p-0">
+					<img
+						src="/img/light_Banner_440x200.png"
+						alt=""
+						class="img-fluid"
+					/>
+				</div>
+				<main class="container">
+					<div class="container text-wrap text-center">
+						<h4 class="lh-lg">
+							Inspire-se a <mark>aprender e crescer</mark> enquanto mantém
+							sua <mark> mente saudável </mark>
+						</h4>
+						<p>
+							<mark>Superar desafios</mark> é possível quando equilibramos estudo e
+							<mark>bem-estar</mark>. Explore
+							estratégias que ajudam a alcançar seu
+							<mark>potencial máximo</mark>
+						</p>
+					</div>
+					<div class="container-sm d-flex flex-row justify-content-between">
+						<p class="align-self-end"><a href="#">+ videos</a></p>
+						<div>
+							<h4 class="text-end">Videos</h4>
+							<p>Para te acalmar e inspirar</p>
+						</div>
+					</div>
+					<!-- Display: None habilitado no carousel em ambiente de produção para evitar reloads o tempo todo -->
+					<div
+						id="inspirational-carousel-video"
+						class="carousel slide"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#inspirational-carousel-video"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#inspirational-carousel-video"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div
+								class="carousel-item active ratio ratio-16x9"
+								data-bs-interval="20000"
+							>
+								<div>
+									<iframe
+										class="d-block w-100"
+										width="560"
+										height="315"
+										src="https://www.youtube.com/embed/J-swZaKN2Ic?si=wTiTRAUeCMXdbZ1k"
+										title="YouTube video player"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+							<div
+								class="carousel-item object-fit-cover ratio ratio-16x9"
+								data-bs-interval="20000"
+							>
+								<iframe
+									class="d-block w-100"
+									width="560"
+									height="315"
+									src="https://www.youtube.com/embed/5MgBikgcWnY?si=8ZqjznVdF_7S7Ui6"
+									title="YouTube video player"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerpolicy="strict-origin-when-cross-origin"
+									allowfullscreen
+								></iframe>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#inspirational-carousel-video"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Anterior</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#inspirational-carousel-video"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Próximo</span>
+						</button>
+						<p class="fs-6">
+							Lembre-se de ativar as legendas quando necessário
+						</p>
+					</div>
+					
+					<div class="container-md text-start">
+						<h4>Artigos</h4>
+						<p>Para te ajudar a seguir em frente</p>
+					</div>
+					<div class="container-lg d-flex flex-row justify-content-around p-0 g-5">
+						<div class="card col-5">
+							<img
+								src="http://unsplash.it/g/200/150?random&blur&gravity=center"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing
+									elit. Quas voluptatum, iure ducimus.
+								</p>
+								<a href="#" class="btn btn-primary background-color--accent"
+									>Leia Mais</a
+								>
+							</div>
+						</div>
+						<div class="card col-5">
+							<img
+								src="http://unsplash.it/g/200/150?random&blur&gravity=center"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing
+									elit. Quas voluptatum, iure ducimus.
+								</p>
+								<a href="#" class="btn btn-primary background-color--accent"
+									>Leia Mais</a
+								>
+							</div>
+						</div>
+					</div>
+						<p class="text-end"><a href="#">+ Artigos</a></p>
+						<p class="text-center">Estudar é um desafio, mas cada esforço nos leva mais perto dos nossos sonhos.</p>
+				</main>
+				<footer class="container-fluid mt-auto d-flex flex-column flex-wrap align-content-center pt-2">
+					<ul class="list-unstyled text-center">
+						<li class="">PDBD026</li>
+						<li class="">2024 Maicon R. dos Santos</li>
+						<li class="">Projeto Desenvolve Bom Despacho</li>
+					</ul>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- fix carousel layout
+ stop carousel auto change
+tweak html nesting for responsive cols
+make menu sidebar for large md > lg screen
+darkmode
+acessibilidade
+	alt imgs
+	contrast
+	aria info
+	animações de hover
+	comentários
+	hieraquização-->
+
+<!--os elementos não precisam estar aninhados entre si, mas sim aninhados dentro da mesma row.
+refatorar o html para cada row já estar presente desde o breakpoint . cada linha precisa necessariamente estar dentro
+de uma row (dã)-->

@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #483E38;
+    --secondary-color: #483E38;
+    --accent-color: #E49961;
+    --text-color: #483E38;
+    --text-color-contrast: #000000;
+    --background-color: #E6E0D7;
+    --background-accent-color:#B3ADA3;
+    --footer-color:#F6DECB;
+  }
+
+body {
+    background-color: #E6E0D7;
+    color: var(--text-color);
+}
+
+main mark {
+    background-color: var(--accent-color);
+    color: var(--text-color-contrast);
+}
+
+#inspirational-video-carousel > carousel-item {
+    height: 200px;
+}
+
+.background-color--accent {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color-contrast);
+}
+.card-body {
+    background-color: var(--background-accent-color);
+    color: var(--text-color-contrast);
+}
+
+footer {
+    background-color: var(--text-color);
+    color: var(--footer-color);
+}
