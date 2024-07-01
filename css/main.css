@@ -74,7 +74,7 @@ mark {
 	color: var(--text-color-contrast);
 }
 
-/* tweaks to clean default bootstrap style */
+/* tweaks to clean undesired bootstrap style */
 .btn:focus {
 	outline: none;
 	background-color: var(--accent-color) !important;
@@ -89,6 +89,10 @@ mark {
 .btn {
 	transition: color 0.15s ease-in-out, var(--accent-color) 0.15s ease-in-out,
 		var(--accent-color) 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.navbar-brand {
+    margin-right: 0px;
 }
 
 footer {
