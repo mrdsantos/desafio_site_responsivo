@@ -37,3 +37,17 @@ footer {
     background-color: var(--text-color);
     color: var(--footer-color);
 }
+
+/* Custom css necessário para mudar a flex direction, display item e width dos elementos em pontos
+responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um mixing no sass mas não é
+o objetivo no momento. */
+@media (min-width: 991.98px) {
+    .nav {
+        flex-direction: column nowrap !important;
+    }
+
+    .nav-item {
+        display: inline-flex;
+        width: 100% !important;
+    }
+}

@@ -21,7 +21,7 @@
 				<!-- Col 3/12 na row 1 que vai abrigar a sidebar de menu quando . > md-->
 				<div class="col-md-3 p-0 p-md-3" id="col-1">
 					<header class="">
-						<nav class="navbar flex-column" role="navigation">
+						<nav class="navbar flex-column flex-md-row mb-md-auto" role="navigation" id="main-nav">
 							<nav class="navbar-brand">
 								<img
 									src="http://placehold.it/200x100?text=hello+world"
@@ -29,16 +29,16 @@
 								/>
 							</nav>
 							<ul class="nav gap-3">
-								<li class="nav-item 1">
+								<li class="nav-item">
 									<a href="#">Inicio</a>
 								</li>
-								<li class="nav-item 1">
+								<li class="nav-item">
 									<a href="#">Videos</a>
 								</li>
-								<li class="nav-item 1">
+								<li class="nav-item">
 									<a href="#">Artigos</a>
 								</li>
-								<li class="nav-item 1">
+								<li class="nav-item">
 									<a href="#">Contato</a>
 								</li>
 							</ul>
@@ -184,9 +184,17 @@
 
 							<!-- Col 6/12 na Rw 3 col 9/12 que abriga os artigos -->
 							<div class="col-md-6 p-0 p-md-3">
-								<div class="container-md text-start">
-									<h4>Artigos</h4>
-									<p>Para te ajudar a seguir em frente</p>
+								<div
+									class="container-md d-flex flex-row justify-content-between"
+								>
+									<div class="container-md text-start">
+										<h4>Artigos</h4>
+										<p>Para te ajudar a seguir em frente</p>
+									</div>
+									<div class="align-self-end">
+										<p class="text-end d-none d-md-inline-flex text-nowrap">
+											<a href="#">+ Artigos</a></p>
+									</div>
 								</div>
 								<div
 									class="container-lg d-flex flex-row justify-content-around p-0 g-5"
@@ -236,7 +244,8 @@
 										</div>
 									</div>
 								</div>
-								<p class="text-end">
+
+								<p class="text-end d-md-none">
 									<a href="#">+ Artigos</a>
 								</p>
 							</div>
@@ -266,8 +275,6 @@
 </html>
 <!-- fix carousel layout
  stop carousel auto change
-tweak html nesting for responsive cols
-make menu sidebar for large md > lg screen
 darkmode
 acessibilidade
 	alt imgs
@@ -276,7 +283,3 @@ acessibilidade
 	animações de hover
 	comentários
 	hieraquização-->
-
-<!--os elementos não precisam estar aninhados entre si, mas sim aninhados dentro da mesma row.
-refatorar o html para cada row já estar presente desde o breakpoint . cada linha precisa necessariamente estar dentro
-de uma row (dã)-->
