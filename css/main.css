@@ -96,6 +96,21 @@ footer {
 	color: var(--footer-color);
 }
 
+/* textura na área de menu */
+
+#col-1 {
+    background-image: url(/img/texture-1.webp);
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+}
+
+#col-2 {
+    background-image: url(/img/texture-2.webp);
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+}
+
+
 /* Custom css necessário para mudar a flex direction, display item e width dos elementos em pontos
 responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um mixing no sass mas não é
 o objetivo no momento. */
