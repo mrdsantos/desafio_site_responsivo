@@ -101,11 +101,20 @@ responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um 
 o objetivo no momento. */
 @media (min-width: 767.98px) {
 	.nav {
-		flex-direction: column nowrap !important;
+		flex-flow: column nowrap !important;
 	}
 
 	.nav-item {
 		display: inline-flex;
 		width: 100% !important;
 	}
+}
+
+@media (min-width: 1399.98px) {
+    .navbar {
+        align-content: flex-end;
+    }
+    .container-xl {
+        margin-left: 0px;
+    }
 }
