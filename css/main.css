@@ -1,53 +1,69 @@
 :root {
-    --primary-color: #483E38;
-    --secondary-color: #483E38;
-    --accent-color: #E49961;
-    --text-color: #483E38;
-    --text-color-contrast: #000000;
-    --background-color: #E6E0D7;
-    --background-accent-color:#B3ADA3;
-    --footer-color:#F6DECB;
-  }
+	--primary-color: #483e38;
+	--secondary-color: #483e38;
+	--accent-color: #e49961;
+	--text-color: #483e38;
+	--text-color-contrast: #000000;
+	--background-color: #e6e0d7;
+	--background-accent-color: #b3ada3;
+	--footer-color: #f6decb;
+}
 
 body {
-    background-color: #E6E0D7;
-    color: var(--text-color);
+	background-color: #e6e0d7;
+	color: var(--text-color);
+}
+
+/* animação de pulse no mark */
+@keyframes mark-pulse {
+	from {
+		outline: 1px solid #e49961;
+	}
+
+	to {
+		outline: 2px solid #fee2cd;
+	}
 }
 
 main mark {
-    background-color: var(--accent-color);
-    color: var(--text-color-contrast);
+	background-color: var(--accent-color);
+	color: var(--text-color-contrast);
+	/* settings da animation-pulse */
+    animation-duration: 1.8s;
+	animation-name: mark-pulse;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #inspirational-video-carousel > carousel-item {
-    height: 200px;
+	height: 200px;
 }
 
 .background-color--accent {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    color: var(--text-color-contrast);
+	background-color: var(--accent-color);
+	border-color: var(--accent-color);
+	color: var(--text-color-contrast);
 }
 .card-body {
-    background-color: var(--background-accent-color);
-    color: var(--text-color-contrast);
+	background-color: var(--background-accent-color);
+	color: var(--text-color-contrast);
 }
 
 footer {
-    background-color: var(--text-color);
-    color: var(--footer-color);
+	background-color: var(--text-color);
+	color: var(--footer-color);
 }
 
 /* Custom css necessário para mudar a flex direction, display item e width dos elementos em pontos
 responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um mixing no sass mas não é
 o objetivo no momento. */
-@media (min-width: 991.98px) {
-    .nav {
-        flex-direction: column nowrap !important;
-    }
+@media (min-width: 767.98px) {
+	.nav {
+		flex-direction: column nowrap !important;
+	}
 
-    .nav-item {
-        display: inline-flex;
-        width: 100% !important;
-    }
+	.nav-item {
+		display: inline-flex;
+		width: 100% !important;
+	}
 }
