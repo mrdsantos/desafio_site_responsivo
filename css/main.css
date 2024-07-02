@@ -51,17 +51,17 @@ body {
 /* animação de pulse no mark */
 @keyframes mark-pulse {
 	from {
-		outline: 1px solid #e49961;
+		outline: 0px solid #e49961;
 	}
 
 	to {
-		outline: 4px solid #fee2cd;
+		outline: 2px solid #fee2cd;
 	}
 }
 mark {
 	background-color: var(--accent-color);
 	color: var(--text-color-contrast);
-	animation-duration: 1.5s;
+	animation-duration: 0.9s;
 	animation-name: mark-pulse;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
