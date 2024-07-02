@@ -3,3 +3,5 @@ temp/
 packa*
 
 node_modules/
+
+.vscode
