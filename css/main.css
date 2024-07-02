@@ -7,11 +7,18 @@
 	--background-color: #e6e0d7;
 	--background-accent-color: #b3ada3;
 	--footer-color: #f6decb;
+	--background-article-color: hsla(34, 100%, 94%, 0.349);
 }
 
 body {
 	background-color: #e6e0d7;
 	color: var(--text-color);
+}
+
+.a-style {
+	color: var(--text-color);
+	text-decoration: underline;
+	font-weight: bolder;
 }
 
 .nav-hover-style {
@@ -95,6 +102,14 @@ mark {
     margin-right: 0px;
 }
 
+.article-paragraph {
+	max-width: 1050px;
+	background-color: var(--background-article-color);
+	outline: 0.5rem solid var(--background-article-color);
+	
+}
+
+
 footer {
 	background-color: var(--text-color);
 	color: var(--footer-color);
@@ -103,13 +118,13 @@ footer {
 /* textura na área de menu */
 
 #col-1 {
-    background-image: url(/img/texture-1.webp);
+    background-image: url(/img/texture-1.png);
     background-repeat: repeat;
     mix-blend-mode: multiply;
 }
 
 #col-2 {
-    background-image: url(/img/texture-2.webp);
+    background-image: url(/img/texture-2.png);
     background-repeat: repeat;
     mix-blend-mode: multiply;
 }
