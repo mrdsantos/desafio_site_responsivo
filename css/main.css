@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 :root {
 	--primary-color: #483e38;
 	--secondary-color: #483e38;
@@ -106,7 +108,10 @@ mark {
 	max-width: 1050px;
 	background-color: var(--background-article-color);
 	outline: 0.5rem solid var(--background-article-color);
-	
+}
+
+.badge {
+	color: var(--text-color);
 }
 
 footer {
