@@ -17,7 +17,7 @@
 		<!-- Wrapper Necessário para Sidebar Responsiva -->
 		<div id="wrapper" class="container-fluid p-0">
 			<!-- Row 1 que vai abrigar col 1, col 2 e seus aninhamentos quando . > md-->
-			<div class="row g-0">
+			<div class="row">
 				<!-- Col 3/12 na row 1 que vai abrigar a sidebar de menu quando . > md-->
 				<div class="col-md-2 p-0 p-md-3" id="col-1">
 					<header class="">
@@ -27,11 +27,13 @@
 							id="main-nav"
 						>
 							<nav class="navbar-brand">
-								<img src="./img/logo_72x100.png" alt="" />
+								<a class="" href="index.html"
+									><img src="./img/logo_72x100.png" alt="" />
+								</a>
 							</nav>
 							<ul class="nav gap-3">
 								<li class="nav-item nav-link">
-									<a class="nav-hover-style" href="index.html"
+									<a class="nav-hover-style page-active" href="index.html"
 										>Inicio</a
 									>
 								</li>
@@ -88,7 +90,9 @@
 									class="container-md d-flex flex-row justify-content-between"
 								>
 									<p class="align-self-end">
-										<a class="nav-hover-style" href="galeria.html"
+										<a
+											class="nav-hover-style"
+											href="galeria.html"
 											>+ videos</a
 										>
 									</p>
@@ -204,7 +208,9 @@
 										<p
 											class="text-end d-none d-md-inline-flex text-nowrap"
 										>
-											<a class="nav-hover-style" href="galeria.html"
+											<a
+												class="nav-hover-style"
+												href="galeria.html"
 												>+ Artigos</a
 											>
 										</p>
