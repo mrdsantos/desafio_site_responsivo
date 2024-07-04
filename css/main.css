@@ -17,6 +17,14 @@ body {
 	color: var(--text-color);
 }
 
+.wrapper-contato {
+	height: calc(100vh - 50px);
+}
+
+col-1-contato, col-2-contato {
+	min-height: 100%;
+}
+
 .a-style {
 	color: var(--text-color);
 	text-decoration: underline;
@@ -101,7 +109,7 @@ mark {
 }
 
 .navbar-brand {
-    margin-right: 0px;
+	margin-right: 0px;
 }
 
 .article-paragraph {
@@ -117,6 +125,12 @@ mark {
 footer {
 	background-color: var(--text-color);
 	color: var(--footer-color);
+	height: 90px;
+}
+
+.footer-contato {
+	position: fixed;
+	bottom: 0;
 }
 
 .text-overflow-ellipsis {
@@ -126,24 +140,24 @@ footer {
 /* textura na área de menu */
 
 #col-1 {
-    background-image: url(../img/texture-1.png);
-    background-repeat: repeat;
-    mix-blend-mode: multiply;
+	background-image: url(../img/texture-1.png);
+	background-repeat: repeat;
+	mix-blend-mode: multiply;
 }
 
 #col-2 {
-    background-image: url(../img/texture-2.png);
-    background-repeat: repeat;
-    mix-blend-mode: multiply;
+	background-image: url(../img/texture-2.png);
+	background-repeat: repeat;
+	mix-blend-mode: multiply;
 }
 
 .text-overflow-excerpt-hidden {
-		width: auto;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 3;
-		line-clamp: 3;
-		overflow: hidden;
+	width: auto;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	overflow: hidden;
 }
 
 .text-overflow-inline-hidden {
@@ -152,9 +166,6 @@ footer {
 	white-space: nowrap;
 	text-overflow: "";
 }
-	  
-
-
 
 /* Custom css necessário para mudar a flex direction, display item e width dos elementos em pontos
 responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um mixing no sass mas não é
@@ -168,15 +179,13 @@ o objetivo no momento. */
 		display: inline-flex;
 		width: 100% !important;
 	}
-
 }
 
 @media (min-width: 1399.98px) {
-    .navbar {
-        align-content: flex-end;
-    }
-    .container-xl {
-        margin-left: 0px;
-    }
-	
+	.navbar {
+		align-content: flex-end;
+	}
+	.container-xl {
+		margin-left: 0px;
+	}
 }
