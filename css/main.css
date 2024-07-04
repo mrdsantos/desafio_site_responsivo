@@ -2,18 +2,33 @@
 
 :root {
 	--primary-color: #483e38;
-	--secondary-color: #483e38;
 	--accent-color: #e49961;
 	--text-color: #483e38;
 	--text-color-contrast: #000000;
 	--background-color: #e6e0d7;
 	--background-accent-color: #b3ada3;
 	--footer-color: #f6decb;
+	--footer-backgroundcolor:#483e38;
 	--background-article-color: hsla(34, 100%, 94%, 0.349);
+	
 }
 
+:root.dark-mode {
+	--primary-color: #00C2FF;
+	--accent-color: #C086D5;
+	--text-color: #00C2FF;
+	--text-color-contrast:#d8f6ff ;
+	--background-color: #262A36;
+	--background-accent-color: #171920;
+	--footer-color: #00C2FF;
+	--footer-backgroundcolor:#481F56;
+	--background-article-color: #171920;
+}
+
+/* Variaveis de img path para light/dark mode */
+
+/* Estilos gerais do corpo e wrapper */
 body {
-	background-color: #e6e0d7;
 	color: var(--text-color);
 }
 
@@ -21,18 +36,19 @@ body {
 	height: calc(100vh - 50px);
 }
 
-col-1-contato,
-col-2-contato {
+.col-1-contato,
+.col-2-contato {
 	min-height: 100%;
 }
 
 .a-style {
-	color: var(--text-color);
+	color: var(--accent-color);
 	text-decoration: underline;
 	font-weight: bolder;
 }
 
-.nav-hover-style {
+/* Estilos de cabeçalho e navegação */
+.nav-hover-style-light {
 	position: relative !important;
 	display: inline-block !important;
 	color: var(--text-color);
@@ -40,50 +56,91 @@ col-2-contato {
 	font-weight: bolder;
 }
 
-/* exibindo imagem em volta do link quando hover */
-.nav-hover-style::after {
-	content: url("../img/nav_hover_120_40.png"); /* Path to your PNG image */
+.nav-hover-style-light::after {
+	content: url("../img/nav_hover_120_40.png");
 	position: absolute;
-	top: 50%; /* Center the image vertically */
-	left: 50%; /* Center the image horizontally */
-	transform: translate(-50%, -50%); /* Translate to fully center the image */
-	display: none; /* Hide the image initially */
-	background-size: contain; /* Ensure the image scales proportionally */
-	background-repeat: no-repeat; /* Prevent the image from repeating */
-	width: 120px; /* Set a default width */
-	height: 40px; /* Set a default height */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 40px;
 }
 
-.nav-hover-style:hover::after {
+.nav-hover-style-light:hover::after {
 	display: block;
-	height: auto; /* Maintain the aspect ratio of the image */
+	height: auto;
 }
+
+
+.nav-hover-style-dark {
+	position: relative !important;
+	display: inline-block !important;
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+.nav-hover-style-dark::after {
+	content: url("../img/dark/nav_hover_120_40.png");
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 40px;
+}
+
+.nav-hover-style-dark:hover::after {
+	display: block;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .page-active::after {
-	content: url("../img/nav_hover_120_40.png"); /* Path to your PNG image */
+	content: url( );
 	position: absolute;
-	top: 50%; /* Center the image vertically */
-	left: 50%; /* Center the image horizontally */
-	transform: translate(-50%, -50%); /* Translate to fully center the image */
-	display: block; /* Hide the image initially */
-	background-size: contain; /* Ensure the image scales proportionally */
-	background-repeat: no-repeat; /* Prevent the image from repeating */
-	width: 120px; /* Set a default width */
-	height: 40px; /* Set a default height */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 40px;
 }
 
-
-
-/* animação de pulse no mark */
+/* Animação de pulse no mark */
 @keyframes mark-pulse {
 	from {
-		outline: 0px solid #e49961;
+		outline: 0px solid var(--accent-color);
 	}
-
 	to {
 		outline: 2px solid #fee2cd;
 	}
 }
+
 mark {
 	background-color: var(--accent-color);
 	color: var(--text-color-contrast);
@@ -93,7 +150,8 @@ mark {
 	animation-direction: alternate;
 }
 
-#inspirational-video-carousel > carousel-item {
+/* Estilos de carrossel e cartões */
+#inspirational-video-carousel > .carousel-item {
 	height: 200px;
 }
 
@@ -102,44 +160,54 @@ mark {
 	border-color: var(--accent-color);
 	color: var(--text-color-contrast);
 }
+
 .card-body {
 	background-color: var(--background-accent-color);
 	color: var(--text-color-contrast);
 }
 
-/* tweaks to clean undesired bootstrap style */
+/* Estilos de botão */
 .btn:focus {
 	outline: none;
 	background-color: var(--accent-color) !important;
 	border: none;
 }
+
 .btn:hover {
 	outline: none;
 	background-color: var(--accent-color);
 	color: var(--text-color-contrast);
 	border: none;
 }
+
 .btn {
-	transition: color 0.15s ease-in-out, var(--accent-color) 0.15s ease-in-out,
-		var(--accent-color) 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .navbar-brand {
 	margin-right: 0px;
 }
 
+/* Estilos de artigo e parágrafo */
 .article-paragraph {
 	max-width: 1050px;
 	background-color: var(--background-article-color);
 	outline: 0.5rem solid var(--background-article-color);
 }
 
+/* Estilos de utilitários */
 .badge {
 	color: var(--text-color);
 }
 
+figcaption {
+	color: var(--text-color) !important;
+}
+
+/* Estilos de rodapé */
 footer {
-	background-color: var(--text-color);
+	background-color: var(--footer-backgroundcolor);
 	color: var(--footer-color);
 	height: 90px;
 }
@@ -153,8 +221,7 @@ footer {
 	text-overflow: ellipsis;
 }
 
-/* textura na área de menu */
-
+/* Textura na área de menu */
 #col-1 {
 	background-image: url(../img/texture-1.png);
 	background-repeat: repeat;
@@ -183,9 +250,7 @@ footer {
 	text-overflow: "";
 }
 
-/* Custom css necessário para mudar a flex direction, display item e width dos elementos em pontos
-responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um mixing no sass mas não é
-o objetivo no momento. */
+/* Estilos responsivos */
 @media (min-width: 767.98px) {
 	.nav {
 		flex-flow: column nowrap !important;
@@ -201,6 +266,7 @@ o objetivo no momento. */
 	.navbar {
 		align-content: flex-end;
 	}
+
 	.container-xl {
 		margin-left: 0px;
 	}

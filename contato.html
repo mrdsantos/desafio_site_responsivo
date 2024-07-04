@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		<script src="/js/bootstrap.bundle.js"></script>
+		<script src="./js/darkmode.js"></script>
 		<title>Mindful Coding - Contato</title>
 	</head>
 	<body>
@@ -19,7 +20,7 @@
 			<!-- Row 1 que vai abrigar col 1, col 2 e seus aninhamentos quando . > md-->
 			<div class="row nowrap h-100 me-0">
 				<!-- Col 3/12 na row 1 que vai abrigar a sidebar de menu quando . > md-->
-				<div class="col-md-2 p-0 p-md-3" id="col-1">
+				<div class="col-md-2 p-0 p-md-3 js-image-lightdark"	data-filename="texture-1.png" id="col-1">
 					<header class="">
 						<nav
 							class="navbar flex-column flex-md-column mb-md-auto"
@@ -27,26 +28,33 @@
 							id="main-nav"
 						>
 							<nav class="navbar-brand">
-								<a class="" href="index.html"
-									><img src="./img/logo_72x100.png" alt="" />
+								<a class="" href="index.html">
+									<img
+										src="#"
+										data-filename="logo_72x100.png"
+										class="js-image-lightdark"
+										alt="Mindful Coding Logo"
+									/>
 								</a>
 							</nav>
 							<ul class="nav gap-3">
 								<li class="nav-item nav-link">
-									<a class="nav-hover-style" href="index.html"
+									<a
+										class="nav-hover-style js-hover-lightdark"
+										href="index.html"
 										>Inicio</a
 									>
 								</li>
 								<li class="nav-item nav-link">
 									<a
-										class="nav-hover-style"
+										class="nav-hover-style js-hover-lightdark"
 										href="galeria.html"
 										>Galeria</a
 									>
 								</li>
 								<li class="nav-item nav-link">
 									<a
-										class="nav-hover-style page-active"
+										class="nav-hover-style js-hover-lightdark"
 										href="contato.html"
 										>Contato</a
 									>
@@ -56,7 +64,11 @@
 					</header>
 				</div>
 				<!-- Col 9/12 na row 1 que vai abrigar o conteúdo  -->
-				<div class="col-md-10 p-1" id="col-2">
+					<div
+					class="col-md-10 p-1 js-image-lightdark"
+					data-filename="texture-2.png"
+					id="col-2"
+				>
 					<main class="container-xl">
 						<!-- Conteúdo principal -->
 						<div class="row">
@@ -121,5 +133,9 @@
 				<li class="">Projeto Desenvolve Bom Despacho</li>
 			</ul>
 		</footer>
+		<script>
+			updateImagePaths()
+			updateHoverStyle()
+		</script>
 	</body>
 </html>
