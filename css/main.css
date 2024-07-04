@@ -31,7 +31,7 @@ body {
 
 /* exibindo imagem em volta do link quando hover */
 .nav-hover-style::after {
-	content: url("/img/nav_hover_120_40.png"); /* Path to your PNG image */
+	content: url("./img/nav_hover_120_40.png"); /* Path to your PNG image */
 	position: absolute;
 	top: 50%; /* Center the image vertically */
 	left: 50%; /* Center the image horizontally */
@@ -109,7 +109,6 @@ mark {
 	
 }
 
-
 footer {
 	background-color: var(--text-color);
 	color: var(--footer-color);
@@ -118,13 +117,13 @@ footer {
 /* textura na área de menu */
 
 #col-1 {
-    background-image: url(/img/texture-1.png);
+    background-image: url(./img/texture-1.png);
     background-repeat: repeat;
     mix-blend-mode: multiply;
 }
 
 #col-2 {
-    background-image: url(/img/texture-2.png);
+    background-image: url(./img/texture-2.png);
     background-repeat: repeat;
     mix-blend-mode: multiply;
 }
