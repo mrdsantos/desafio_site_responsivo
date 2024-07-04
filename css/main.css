@@ -119,6 +119,10 @@ footer {
 	color: var(--footer-color);
 }
 
+.text-overflow-ellipsis {
+	text-overflow: ellipsis;
+}
+
 /* textura na área de menu */
 
 #col-1 {
@@ -133,6 +137,24 @@ footer {
     mix-blend-mode: multiply;
 }
 
+.text-overflow-excerpt-hidden {
+		width: auto;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		line-clamp: 3;
+		overflow: hidden;
+}
+
+.text-overflow-inline-hidden {
+	width: auto;
+	overflow: clip;
+	white-space: nowrap;
+	text-overflow: "";
+}
+	  
+
+
 
 /* Custom css necessário para mudar a flex direction, display item e width dos elementos em pontos
 responsivos que não são cobertos pelo bootstrap (na verdade pode ser fazer um mixing no sass mas não é
@@ -146,6 +168,7 @@ o objetivo no momento. */
 		display: inline-flex;
 		width: 100% !important;
 	}
+
 }
 
 @media (min-width: 1399.98px) {
@@ -155,4 +178,5 @@ o objetivo no momento. */
     .container-xl {
         margin-left: 0px;
     }
+	
 }
