@@ -69,17 +69,17 @@ function updateColorSchemeStyle() {
     if (isDarkMode) {
         elements.forEach((element) => {
             // Remove a classe de estilo de hover para o modo claro
-            element.classList.remove("nav-hover-style-light");
+            element.classList.remove("color-scheme-light");
             // Adiciona a classe de estilo de hover para o modo escuro
-            element.classList.add("nav-hover-style-dark");
+            element.classList.add("color-scheme-dark");
         });
     } else {
         // Se o modo claro estiver ativo
         elements.forEach((element) => {
             // Adiciona a classe de estilo de hover para o modo claro
-            element.classList.add("nav-hover-style-light");
+            element.classList.add("color-scheme-light");
             // Remove a classe de estilo de hover para o modo escuro
-            element.classList.remove("nav-hover-style-dark");
+            element.classList.remove("color-scheme-dark");
         });
     }
 }
