@@ -131,10 +131,18 @@ mark {
 	animation-direction: alternate;
 }
 
-/* Estilos de carrossel e cartões */
+/* Estilos de carrossel*/
 #inspirational-video-carousel > .carousel-item {
 	height: 200px;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+	top: 130px;
+	bottom: 130px;
+}
+
+/* estilo de cartões */
 
 .background-color--accent {
 	background-color: var(--accent-color);
@@ -211,10 +219,6 @@ footer {
 	bottom: 0;
 }
 
-.text-overflow-ellipsis {
-	text-overflow: ellipsis;
-}
-
 /* Textura na área de menu */
 #col-1 {
 	background-image: url(../img/texture-1.png);
@@ -264,4 +268,50 @@ footer {
 	.container-xl {
 		margin-left: 0px;
 	}
+}
+
+/* Dark Mode Toggle */
+
+.dark-mode-checkbox {
+	display: none;
+}
+
+.dark-mode-label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-accent-color);
+	color: var(--text-color-contrast);
+	width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	position: relative;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.dark-mode-label .bi {
+	font-size: 16px;
+	position: absolute;
+	transition: transform 0.3s ease;
+}
+
+.dark-mode-label .bi-moon-stars-fill {
+	transform: translate(-9px, 1px);
+}
+
+.dark-mode-label .bi-brightness-high-fill {
+	transform: translate(10px, 1px);
+}
+
+.dark-mode-checkbox:checked + .dark-mode-label {
+	background-color: var(--accent-color);
+}
+
+.dark-mode-checkbox:checked + .dark-mode-label .bi-moon-stars-fill {
+	transform: translate(10px, 1px);
+}
+
+.dark-mode-checkbox:checked + .dark-mode-label .bi-brightness-high-fill {
+	transform: translate(-9px, 1px);
 }
