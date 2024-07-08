@@ -8,7 +8,7 @@ const root = document.documentElement;
 function toggleDarkMode() {
     root.classList.toggle("dark-mode");
     updateImagePaths();
-    updateHoverStyle();
+    updateColorSchemeStyle();
 }
 
 // Função que confere se o navegador tem preferência pelo tema dark
@@ -24,7 +24,7 @@ function setInitialDarkMode() {
         darkModeCheckbox.checked = false;
     }
     updateImagePaths();
-    updateHoverStyle();
+    updateColorSchemeStyle();
 }
 
 function updateImagePaths() {
@@ -58,7 +58,7 @@ function updateImagePaths() {
     });
 }
 
-function updateHoverStyle() {
+function updateColorSchemeStyle() {
     // Seleciona todos os elementos que devem mudar de estilo de hover com base no tema
     const elements = document.querySelectorAll(".js-hover-lightdark");
     
