@@ -7,7 +7,6 @@ const root = document.documentElement;
 // Método toggle para funcionar como switch entre light-mode e dark-mode
 function toggleDarkMode() {
     root.classList.toggle("dark-mode");
-    const isDarkMode = root.classList.contains("dark-mode");
     updateImagePaths();
     updateHoverStyle();
 }
@@ -24,7 +23,6 @@ function setInitialDarkMode() {
         root.classList.remove("dark-mode");
         darkModeCheckbox.checked = false;
     }
-    const isDarkMode = root.classList.contains("dark-mode");
     updateImagePaths();
     updateHoverStyle();
 }
@@ -61,20 +59,31 @@ function updateImagePaths() {
 }
 
 function updateHoverStyle() {
+    // Seleciona todos os elementos que devem mudar de estilo de hover com base no tema
     const elements = document.querySelectorAll(".js-hover-lightdark");
-	const isDarkMode = root.classList.contains("dark-mode");
-    if (isDarkMode == true) {
+    
+    // Verifica se o modo escuro está ativo
+    const isDarkMode = root.classList.contains("dark-mode");
+    
+    // Se o modo escuro estiver ativo
+    if (isDarkMode) {
         elements.forEach((element) => {
-            element.classList.remove(".nav-hover-style-light");
+            // Remove a classe de estilo de hover para o modo claro
+            element.classList.remove("nav-hover-style-light");
+            // Adiciona a classe de estilo de hover para o modo escuro
             element.classList.add("nav-hover-style-dark");
         });
     } else {
+        // Se o modo claro estiver ativo
         elements.forEach((element) => {
-            element.classList.add(".nav-hover-style-light");
+            // Adiciona a classe de estilo de hover para o modo claro
+            element.classList.add("nav-hover-style-light");
+            // Remove a classe de estilo de hover para o modo escuro
             element.classList.remove("nav-hover-style-dark");
         });
     }
 }
+
 
 // Inicializa o modo dark baseado na preferência do usuário
 setInitialDarkMode();
