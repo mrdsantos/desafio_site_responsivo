@@ -8,20 +8,19 @@
 	--background-color: #e6e0d7;
 	--background-accent-color: #b3ada3;
 	--footer-color: #f6decb;
-	--footer-backgroundcolor:#483e38;
+	--footer-backgroundcolor: #483e38;
 	--background-article-color: hsla(34, 100%, 94%, 0.349);
-	
 }
 
 :root.dark-mode {
-	--primary-color: #00C2FF;
-	--accent-color: #C086D5;
-	--text-color: #00C2FF;
-	--text-color-contrast:#d8f6ff ;
-	--background-color: #262A36;
-	--background-accent-color: #171920;
-	--footer-color: #00C2FF;
-	--footer-backgroundcolor:#481F56;
+	--primary-color: #00c2ff;
+	--accent-color: #c086d5;
+	--text-color: #00c2ff;
+	--text-color-contrast: #d8f6ff;
+	--background-color: #262a36;
+	--background-accent-color: #222530;
+	--footer-color: #00c2ff;
+	--footer-backgroundcolor: #481f56;
 	--background-article-color: #171920;
 }
 
@@ -74,7 +73,6 @@ body {
 	height: auto;
 }
 
-
 .color-scheme-dark {
 	position: relative !important;
 	display: inline-block !important;
@@ -101,25 +99,8 @@ body {
 	height: auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .page-active::after {
-	content: url( );
+	content: url();
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -203,6 +184,19 @@ mark {
 
 figcaption {
 	color: var(--text-color) !important;
+}
+
+.card {
+	border: none !important;
+}
+
+.gallery-card {
+	background-color: var(--background-article-color);
+	color: var(--text-color-contrast);
+}
+
+.rounded-pill {
+	background-color: var(--background-accent-color);
 }
 
 /* Estilos de rodapé */
